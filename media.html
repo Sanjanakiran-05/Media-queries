@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media queries</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: rgb(89, 34, 34);
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            overflow: scroll;
+            flex-wrap: wrap;
+        }
+        .grp{
+            font-size: 25px;
+            display: flex;
+            justify-content: start; 
+            gap: 30px;
+        }
+        .box1{
+            background-color: black;
+            background-image: url(g1.jpg);
+            background-size: cover;
+            width: 550px;
+            height: 330px;
+            border-radius: 20px;
+        }
+        .box2{
+            background-color: black;
+            background-image: url(g2.jpg);
+            background-size: cover;
+            width: 550px;
+            height: 330px;
+            border-radius: 20px;
+        }
+        .o{
+            margin-left: 10px;
+        }
+        .b{
+            margin-left: 10px;
+            font-size: 20px;
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-top: 5px;
+            padding: 3px;
+            cursor: pointer;
+        }
+        @media (max-width:1135px){
+            .grp{
+                flex-direction: column;
+                font-size: 25px;
+            }
+            .box1{
+                width: 550px;
+            }
+            .box2{
+                width: 550px;
+            }
+            .b{
+                font-size: 25px;
+            }
+        }
+        @media(max-width:595px){
+            .grp{
+                font-size: 17px;
+            }
+            .box1{
+                width: 300px;
+            }
+            .box2{
+                width: 300px;
+            }
+            .b{
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grp">
+            <div class="box1">
+                <h1 class="o">Vegetables</h1>
+                <p class="o">Get Upto 30% Off</p>
+                <button class="b">Shop Now</button>
+            </div>
+            <div class="box2">
+                <h1 class="o">Freshly Baked Buns</h1>
+                <p class="o">Get Upto 25% Off</p>
+                <button class="b">Shop Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
